@@ -2,7 +2,7 @@
   "name": "foldie",
   "preferGlobal": true,
   "bin": "./index.js",
-  "version": "0.1.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
