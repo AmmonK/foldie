@@ -2,15 +2,31 @@
 
 > the random folder generator
 
-Tired of making folders? Let foldie make them for you.
+Tired of making folders? Foldie will take a random food and a random animal and make that folder for you.
 
-Run the command:
+Installation:
+
+```
+npm i -g foldie
+```
+
+Use:
 
 ```
  foldie make
 ```
 
-And foldie will tell you what folder it has made!
+Don't want to install and have npm > 5.2?
+
+```
+npx foldie make
+```
+
+Foldie will tell you what folder it has made!
+
+```
+foldie made tartar_avocet
+```
 
 _foldie will make a folder in whichever directory it was ran from_
 

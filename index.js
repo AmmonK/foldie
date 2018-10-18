@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 
 let program = require("commander");
-var fs = require("fs");
-let food = require("./food");
-let animal = require("./animal");
+let fs = require("fs");
+let foods = require("./data/foods");
+let animals = require("./data/animals");
 
-program.version("0.1.0").description("Folder Generator");
+program
+  .version(require("./package.json").version, "-v, --version")
+  .description("Foldie the folder generator");
 
 program.command("make").action(() => {
-  //console.log(process.cwd());
-  let randomFood = food[Math.floor(Math.random() * food.length)];
-  let randomAnimal = animal[Math.floor(Math.random() * animal.length)];
-  let folderName = randomFood.toLowerCase() + "_" + randomAnimal.toLowerCase();
+  let randomFood = randomItem(foods);
+  let randomAnimal = randomItem(animals);
+  let folderName = (randomFood + "_" + randomAnimal).toLowerCase();
   if (!fs.existsSync(folderName)) {
     fs.mkdirSync(folderName);
     console.log("foldie made", folderName);
@@ -19,5 +20,7 @@ program.command("make").action(() => {
     console.log("cannot make folder");
   }
 });
+
+const randomItem = arr => arr[Math.floor(Math.random() * arr.length)];
 
 program.parse(process.argv);

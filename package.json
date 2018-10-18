@@ -1,24 +1,29 @@
 {
   "name": "foldie",
-  "preferGlobal": true,
-  "bin": "./index.js",
   "version": "0.0.3",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Foldie the folder generator",
+  "keywords": [
+    "folder",
+    "foldie",
+    "generator"
+  ],
+  "homepage": "https://github.com/AmmonK/foldie",
+  "bugs": {
+    "url": "https://github.com/AmmonK/foldie/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/AmmonK/foldie.git"
   },
-  "bugs": {
-    "url": "https://github.com/AmmonK/foldie/issues"
-  },
-  "homepage": "https://github.com/AmmonK/foldie",
-  "author": "",
   "license": "ISC",
+  "author": "Ammon King",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "commander": "^2.19.0"
-  }
+  },
+  "preferGlobal": true
 }
